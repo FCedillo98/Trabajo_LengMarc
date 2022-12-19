@@ -13,10 +13,22 @@
   font-weight: 1000;
 }
 
+@font-face {font-family: secciones;
+  src: url('../fonts/Noto_Sans/NotoSans-SemiBoldItalic.ttf'); 
+  font-size: 2em;
+  font-weight: 1000;
+}
+
+@font-face {font-family: general;
+  src: url('../fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf'); 
+
+}
+
 * {box-sizing: border-box;}
 
 body {font-family: 'Ubuntu', sans-serif;
       background-color: #cfe0e8;
+      font-family: general;
 }
 
 #wrapper {background-color: rgba(0, 0, 0, 0);
@@ -27,12 +39,13 @@ body {font-family: 'Ubuntu', sans-serif;
 
 section {padding: 2%;}
 
-#titulo-section {font-family: titulos;
+#titulo-section {font-family: secciones;
     font-size: 2.5rem;
     text-align: center;
+    padding-bottom: 3px;
     border-bottom: 3px solid #000;
     width: 50%;
-    margin: 5% auto;
+    margin: 5% auto 3% auto;
     color: #f1e3dd;
 }
 
@@ -90,7 +103,7 @@ section {padding: 2%;}
   /* MEDIA QUERIES DE LA BARRA DE NAVEGACIÓN SOLA */
   
    /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-   @media screen and (max-width: 800px) {
+   @media screen and (max-width: 990px) {
     
           .topnav a:not(:first-child) {display: none; }
           .topnav a.icon {
@@ -101,7 +114,7 @@ section {padding: 2%;}
         }
         
         /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-        @media screen and (max-width:800px) {
+        @media screen and (max-width:990px) {
           .topnav.responsive {position: relative; width: 100%;}
           .topnav.responsive a.icon {
             position: absolute;
@@ -121,8 +134,24 @@ section {padding: 2%;}
 
 #hero {padding:0px;
   position:relative;
-  top: 22px;                                                                                                  
+  top: 27px;                                                                                                  
 }                                                         
+
+#slogan1 {display:none;}
+
+#slogan2 {position: absolute;
+          top: 23%;
+          width: auto;
+          color:#FFF;
+          background-color: #007cb546;
+          border-radius: 5px;}
+
+#slogan3 {position: absolute;
+          right: 2px;
+          width: auto;
+          color:#FFF;
+          background-color: #11448646;
+          border-radius: 5px;}
 
 .col2 {margin: 5%;}
 
@@ -320,8 +349,10 @@ border-radius: 10px;}
 
 .contacto {display:grid;
            grid-template-columns: 45% 25% 30%;
-           
+           margin: 0 auto 0 2%;
           }
+
+#textocontacto {width: 80%;}
 
 #columnaimg1 {display: grid;
   grid-template-columns: 20% 80%;}
@@ -331,7 +362,9 @@ border-radius: 10px;}
 .columna3  {display: grid;
             grid-template-columns: 25% 75%;
             width: 100%;
-            padding:10%;
+            padding-top: 5%;
+            padding-right: 3%;
+            padding-bottom:10%;
             margin:auto;}
 
 /*********************************** FOOTER *****************************************************************************/
@@ -419,9 +452,9 @@ footer {background-color: #000;
             position:relative;}
 
   #hero {width: 100%;
-         top: 25px}
+         top: 30px;}
   
-  .text {top:70%}
+  .text {top:70%;}
   .nube {top: 70%;}
   .numbertext {
             display:none;
@@ -435,7 +468,7 @@ footer {background-color: #000;
 
  .grid4 {grid-template-columns: 50% 50%;} 
 
- .grid3 {grid-template-columns: 50% 50%} 
+ .grid3 {grid-template-columns: 50% 50%;} 
 
  .trabajo {grid-template-columns: 50% 50%;}
 
@@ -444,7 +477,9 @@ footer {background-color: #000;
  #lista2 {margin-top: -70px;} 
 }
 
-@media only screen and (width<=650px){
+
+
+@media only screen and (width<=835px){
        
   #wrapper {
     width: calc(100% + 16px);
@@ -457,7 +492,7 @@ footer {background-color: #000;
    top:30px;}
 
 #titulo {width: 80%;
-         left:10%}
+         left:10%;}
 
 .grid12 {grid-template-columns: 50% 50%;}
 
@@ -468,7 +503,7 @@ footer {background-color: #000;
 #lista2 {margin-top: -30px;}
 }
 
-@media only screen and (width<=515px){
+@media only screen and (width<=600px){
 
 .text {
            width: 100%;
