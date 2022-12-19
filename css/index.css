@@ -49,14 +49,13 @@ section {padding: 2%;}
 
         /* Add a black background color to the top navigation */
          /* Style the navbar */
-.topnav {
-          background-color: #333; /* Black background color */
-          position: fixed; /* Make it stick/fixed */
-          top:0;
-          width: calc(80% - 12.5px);
-          transition: top 0.3s; /* Transition effect when sliding down (and up) */
-          z-index: 3;
-          }
+.topnav {background-color: #333; /* Black background color */
+         position: fixed; /* Make it stick/fixed */
+         top:0;
+         width: calc(80% - 12.5px);
+         transition: top 0.3s; /* Transition effect when sliding down (and up) */
+         z-index: 3;
+         }
 
 /* Navbar links */
 .topnav a {
@@ -70,7 +69,7 @@ section {padding: 2%;}
 
         
           /* Change the color of links on hover */
-.topnav a:hover {
+.topnav a:hover{
             background-color: #ddd;
             color: black;
 }
@@ -78,12 +77,13 @@ section {padding: 2%;}
           /* Add an active class to highlight the current page */
 .topnav a.active {
             background-color: #667292;
-            color: white;
+            color: black;
 }
           
           /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
             display: none;
+            
 } 
   
           
@@ -91,25 +91,29 @@ section {padding: 2%;}
   
    /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
    @media screen and (max-width: 800px) {
-          .topnav a:not(:first-child) {display: none;}
+    
+          .topnav a:not(:first-child) {display: none; }
           .topnav a.icon {
             float: right;
             display: block;
           }
+          .topnav a {width: 30%; height: auto;}
         }
         
         /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
         @media screen and (max-width:800px) {
-          .topnav.responsive {position: relative;}
+          .topnav.responsive {position: relative; width: 100%;}
           .topnav.responsive a.icon {
             position: absolute;
             right: 0;
             top: 0;
+            
           }
           .topnav.responsive a {
             float: none;
             display: block;
             text-align: left;
+            
           }
         } 
 
@@ -146,19 +150,21 @@ section {padding: 2%;}
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 15px 15px 0;
   user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 15px 0 0 15px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 4;
 }
 
 /* Caption text */
@@ -414,73 +420,46 @@ footer {background-color: #000;
  #lista2 {margin-top: -70px;}  /* hack para conseguir que la lista de ideas parezca una */
 }
 
-@media only screen and (width<=800px){/*todas las excepciones para móvil*/
-  #hero {width: 100%;
-         top: 25px} /* se aprovecha más el ancho*/
-  
-  .text {top:70%}
-  .nube {top: 70%;}
-  .numbertext {
-            display:none;
-           } /* se corrige el zoom de la foto*/
- #titulo4 {
-            top: -200px;
-            left: 200px;
-          }
-
- .grid2 {grid-template-columns: 100%;}
-
- .grid4 {grid-template-columns: 50% 50%;} /* pasar de 4 columnas a 2 */
-
- .grid3 {grid-template-columns: 50% 50%} /* las columnas del footer, pasan a 2 lineas */
-
- .trabajo {grid-template-columns: 50% 50%;}
-
- .contacto {grid-template-columns:50% 50%;}
-
- #lista2 {margin-top: -70px;}  /* hack para conseguir que la lista de ideas parezca una */
-}
-
- 
-
 @media only screen and (width<=650px){/*todas las excepciones para móvil*/
-       #hero {width: 100%;
-              top:30px;} /* se aprovecha más el ancho*/
-       #titulo {
-                width: 80%;
-                left:10%
-               }
-      .grid2 {grid-template-columns: 100%;}
+       
+#hero {width: 100%;
+       top:30px;} /* se aprovecha más el ancho*/
 
-      .grid4 {grid-template-columns: 100%;}
+#titulo {width: 80%;
+         left:10%}
 
-      .grid3 {grid-template-columns: 50% 50%;} /* las columnas del footer, pasan a 2 lineas */
+.grid12 {grid-template-columns: 50% 50%;}
 
- .trabajo {grid-template-columns: 55% 45%;}
+.grid4 {grid-template-columns: 100%;}
 
- .contacto {grid-template-columns:50% 50%;}
+.trabajo {grid-template-columns: 55% 45%;}
 
-      #lista2 {margin-top: -30px;}
+#lista2 {margin-top: -30px;}
 }
 
-@media only screen and (width<=510px){/*507.5px*/
-  #hero {width: 100%;
+@media only screen and (width<=515px){/*507.5px*/
+
+#wrapper {
+          width: calc(100% + 16px);
+          margin: auto -8px;
+}
+
+.topnav {width: 100%;}
+
+#hero {width: 100%;
          top:30px;} /* se aprovecha más el ancho*/
-  .text {
+.text {
            width: 100%;
            top: 20%;
           }
-    
-    #nube {display: none;}
- .grid2 {grid-template-columns: 100%;}
 
- .grid4 {grid-template-columns: 100%;}
- 
- .grid3 {grid-template-columns: 50% 50%;} /* las columnas del footer, pasan a 2 lineas */
+#nube {display: none;}
 
- .trabajo {grid-template-columns: 100%;}
+.grid12 {grid-template-columns: 100%;} /* las columnas del footer, pasan a 2 lineas */
 
- .contacto {grid-template-columns:100%;}
+.trabajo {grid-template-columns: 100%;}
 
- #lista2 {margin-top: -30px;}
+.contacto {grid-template-columns:100%;}
+
+#lista2 {margin-top: -30px;}
 }
