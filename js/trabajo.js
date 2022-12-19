@@ -1,11 +1,11 @@
 /*************************************************************************************************/
-/*  Web del Romanticismo   - dunciones de js para snippets                                       */
-/*  CSS de Autores románticos                                                                    */
+/*  Web de Dream Eventos   - funciones de js para snippets                                       */
+/*  JS de Dream Eventos                                                                          */
 /*  Autor: Francisco Cedillo Serrato                                                             */
 /*  Versión 1.0                                                                                  */
 /*************************************************************************************************/
 
-/*********************** BARRA DE VANVEGACIÓN *********************************/
+/*********************** BARRA DE VANVEGACIÓN ****************************************************/
 
 
 
@@ -32,7 +32,7 @@ function myFunction() {
     }
   } 
 
-/*********************** FUNCIÓN PARA HERO SECTION ****************************/ 
+/*********************** FUNCIÓN PARA HERO SECTION ***********************************************/ 
 let slideIndex = 1;
 showSlides(slideIndex);
 
